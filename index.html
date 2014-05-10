@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<!--
+
+index.html
+
+CS50 Final Project
+
+Concept Site for Portfolio Exhibition
+
+The website prepares a framework for users to browse a portfolio of curated projects
+in a digital format. The format is designed to allow user to direct their own experience.
+The user always has the option to go down a path he/she decides. At the top: selected work,
+resume, and contact. At the middle: a gallery that exhibits projects. And at the bottom: 
+slides that showcase project details and a map that informs the location of the project.
+Navigation is enhanced with a fixed side bar on the right as the user enters the gallery. 
+Files of a project must be uploaded in designated format, with the future possibility of 
+accepting uploads in mind.
+
+-->
+
+<html>
+    <head>
+        <meta name="description" content="CS50 Final Project">
+        <meta name="keywords" content="HTML, CSS, JavaScript, CS50, Portfolio, Resume, Contact">
+        <meta name="author" content="Chen-Dah Chiang">
+       
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+        <link rel="stylesheet" href="css/leaflet.css"/>
+        <link rel="stylesheet" href="css/gallery.css"/>
+        <link rel="stylesheet" href="css/example.css">
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/jquery-ui-1.10.4.custom.min.css"/>
+        
+        <script src="js/jquery-1.11.0.min.js"></script>
+        <script src="js/leaflet.js"></script>      
+        <script src="js/projects.js"></script>
+        <script src="js/img-files.js"></script>
+        <script src="js/bootstrap.min.js"></script> 
+        <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+        
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-50802860-1', 'chiangchendah.github.io');
+          ga('send', 'pageview');
+
+
+        </script>
+        
+        <title>Chen-Dah Chiang</title>
+    </head>   
+    <body>
+        <div id="background">
+            <img id="portrait" src="img/portrait.jpg">
+            <img id="portrait-s" src="img/portrait-dwnsize.jpg">
+            <img id="portrait-ipad" src="img/portrait-ipad.jpg">
+            <div id="credits">
+                <p>
+                    <b>
+                    This site has been built with “S Gallery: A Responsive jQuery Gallery Plugin with CSS3 Animations,” available under a Creative Commons Attribution-NonCommercial license, © Sara Soueidan.
+                    SlidesJS is licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache license</a>. © 2013 <a href="http://nathansearles.com" target="_blank">Nathan Searles</a>
+                    </b>
+                </p>
+            </div>
+        </div>
+        <div id="about">
+            <div id="navbar">
+                <img id="signature" src="img/signature.png" alt="Chen-Dah Chiang">   
+                <div id="menu">
+                    <a href="#gallery" class="scroll active" id="work">Selected Work</a>
+                    <span class="round">•</span>
+                    <a href="" data-toggle="modal" data-target="#myModal" id="resume">Resume</a>
+                    <span class="round">•</span>
+                    <a href="mailto:chiang.c@wustl.edu" target="_top" id="contact">Contact</a>
+                </div>
+            </div>
+        </div>           
+        <div id="gallery">
+            <div id="gallery-container"></div>
+        </div>       
+        <div class="container" id="slideshow"></div>                   
+        <div id="footer"></div>               
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body" id="resume">
+                        <img src="img/color-resume.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>                  
+        <!-- call main script and pertaining scripts at end of body -->
+        <script src="js/main.js"></script>        
+        <script src="js/scripts.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/jquery.slides.min.js"></script>       
+    </body>
+</html>

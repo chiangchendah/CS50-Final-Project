@@ -1,0 +1,334 @@
+/* 
+ * style.css
+ *
+ * CS50 Final Project
+ *
+ * Customized CSS 
+ *
+ **/
+
+
+
+/* document */
+
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body { 
+    height: 100%;
+    font-family: 'Century Gothic', sans-serif;
+	font-weight: 900;
+	font-size: 8px;
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+	font-style: normal;
+}
+
+#background {
+    height: 5px;
+    font-size: 8px;
+}
+
+#portrait {
+    overflow: scroll;
+    width: 1280px;
+    height: 3000px;
+}
+
+#portrait-s {
+    display: none;
+}
+
+#portrait-ipad {
+    display: none;
+}
+
+/* iphone */
+@media only screen 
+and (min-device-width: 320px)
+and (max-device-width: 568px){
+
+    #portrait-s {
+      display:initial;
+      overflow:scroll;
+      width: 100%;
+    }
+    
+    #portrait {
+        display:none;
+    }
+
+}
+
+/* ipad */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+    #portrait-ipad {
+      display:initial;
+      overflow:scroll;
+      width: 100%;
+    }
+    
+    #portrait {
+        display:none;
+    }
+}
+
+
+#gallery {
+    padding: 0 0 250px 0;
+}
+
+
+#credits p {
+    text-align: center;
+}
+
+/* Home */
+
+#about {
+    height: 700px;
+}
+
+
+#signature {
+    position: relative;
+    float: left;
+    height: 170px; 
+    z-index: 10;
+    padding-left: 20px;
+    
+}
+
+#menu {
+    position: relative;
+    float: right;
+    margin-top: 65px;
+    margin-right: 60px;
+    font-weight: 900;
+    font-size: 15px;
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+    font-style: normal;
+}
+
+#menu a {
+	color: #000000;
+	text-decoration: none;
+}
+
+#menu a:hover {
+	color: #9a9a9a;
+}
+
+.round {
+	margin: 0 14px;
+	font-family: Arial;
+}
+
+/* Sticky Menu */
+
+#menu.fixed{
+    position:fixed;
+    right:0;
+    z-index: 9999;
+}
+
+#menu img {
+    display: block;
+    margin-bottom: 6px;
+    height: 40%;
+    right: 0;
+}
+
+/* slideshow */
+
+#slideshow {
+    padding: 0 0 250px 0;
+}
+
+/* iphone */
+@media only screen 
+and (min-device-width: 320px)
+and (max-device-width: 568px){
+    #slideshow {
+        padding: 0 0 0 0;
+    }
+}
+
+/* ipad */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  {
+    #slideshow {
+        padding: 0 0 0 0;
+    }
+}
+
+#slides {
+  display: none
+}
+
+#slides img {
+    padding: 10px 0 0 0;
+    box-shadow: 0px 3px 6px #ccc;
+    -webkit-box-shadow: 0px 3px 6px #ccc;
+    -moz-box-shadow: 0px 3px 6px #ccc;
+}
+
+#slides .slidesjs-navigation {
+    position: relative;
+    margin-top:5px;
+}
+
+a.slidesjs-next,
+a.slidesjs-previous,
+a.slidesjs-play,
+a.slidesjs-stop {
+  background-image: url(../img/btns-next-prev.png);
+  background-repeat: no-repeat;
+  display:block;
+  width:12px;
+  height:18px;
+  overflow: hidden;
+  text-indent: -9999px;
+  float: left;
+  margin-right:5px;
+}
+
+a.slidesjs-next {
+  margin-right:10px;
+  background-position: -12px 0;
+}
+/*
+a:hover.slidesjs-next {
+  background-position: -12px -18px;
+}
+*/
+a.slidesjs-previous {
+  background-position: 0 0;
+}
+/*
+a:hover.slidesjs-previous {
+  background-position: 0 -18px;
+}
+*/
+a.slidesjs-play {
+  width:15px;
+  background-position: -25px 0;
+}
+/*
+a:hover.slidesjs-play {
+  background-position: -25px -18px;
+}
+*/
+a.slidesjs-stop {
+  width:18px;
+  background-position: -41px 0;
+}
+/*
+a:hover.slidesjs-stop {
+  background-position: -41px -18px;
+}
+*/
+.slidesjs-pagination {
+  position:relative;
+  margin: 7px 0 0;
+  float: right;
+  list-style: none;
+}
+
+.slidesjs-pagination li {
+  float: left;
+  margin: 0 1px;
+}
+
+.slidesjs-pagination li a {
+  display: block;
+  width: 13px;
+  height: 0;
+  padding-top: 13px;
+  background-image: url(../img/pagination.png);
+  background-position: 0 0;
+  float: left;
+  overflow: hidden;
+}
+
+.slidesjs-pagination li a.active,
+.slidesjs-pagination li a:hover.active {
+  background-position: 0 -13px
+}
+
+.slidesjs-pagination li a:hover {
+  background-position: 0 -26px
+}
+
+#slides a:link,
+#slides a:visited {
+  color: #333
+}
+
+#slides a:hover,
+#slides a:active {
+  color: #9e2020
+}
+
+.navbar {
+  overflow: hidden
+}
+
+   
+/* Map */
+
+#footer {
+    position: relative;
+    /* move the footer up negatively exactly the same height
+       as the footer so that its back in the view and always 
+       appears to rest at the bottom of the page  */
+    margin-top: -140px;
+}
+
+#map {
+    margin-left: auto;
+    margin-right: auto;
+    width: 940px;
+    height: 500px;
+}
+
+/* Resume */
+
+#resume img {
+    width: 100%;
+    margin-top: -15px;
+}
+
+.modal-header {
+    border-bottom: 0px;
+}
+
+
+/* Gallery Hover Fade In */
+#items--small img {    
+    opacity: 0.8; 
+     
+    /*Transition*/ 
+    -webkit-transition: all 0.5s ease; 
+    -moz-transition: all 0.5s ease; 
+    -o-transition: all 0.5s ease; 
+ 
+} 
+
+#items--small img:hover { 
+    opacity: 1;  
+    -webkit-transform: rotate(-2deg); 
+    -moz-transform: rotate(-2deg); 
+    -o-transform: rotate(-2deg); 
+}
