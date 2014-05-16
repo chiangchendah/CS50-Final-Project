@@ -29,6 +29,10 @@ body {
 	letter-spacing: 0.3em;
 	text-transform: uppercase;
 	font-style: normal;
+
+ 
+  background-image: url('../img/portrait.jpg');
+    
 }
 
 #background {
@@ -65,6 +69,10 @@ and (max-device-width: 568px){
         display:none;
     }
 
+    body {
+      background-image: url('../img/portrait-dwnsize.jpg');
+    }
+
 }
 
 /* ipad */
@@ -79,6 +87,10 @@ and (max-device-width : 1024px) {
     
     #portrait {
         display:none;
+    }
+
+    body {
+      background-image: url('../img/portrait-ipad.jpg');
     }
 }
 
